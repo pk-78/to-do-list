@@ -1,0 +1,46 @@
+<%-include("header")-%>
+
+    <!-- <% if(listTitle === "Saturday" || listTitle === "Sunday"){ %>
+        <h1 style="color: red"><%= listTitle %> to do list</h1>
+    <%} else{ %>
+        <h1 style="color:green"><%= listTitle %> to do list</h1>
+    <% } %> -->
+   
+    <div class="box" id="heading">
+        <h1><%= listTitle%></h1>
+    </div>
+
+    <div class="box">
+        
+        <!-- <% for(let i=0;i<addedItem.length;i++){ %>
+
+            <div class="item">
+                <input type="checkbox">
+                <p><%= addedItem[i].name%></p>
+            </div>
+       
+        <%}%> -->
+        <% addedItem.forEach(function(element){ %>
+            <form action="/delete" method="post">
+            <div class="item">
+                <input type="checkbox" name="check" value="<%= element._id %>" onchange="this.form.submit()">
+                <p><%= element.name%></p>
+            </div>
+            <input type="hidden" name="listname" value="<%= listTitle %>"></input>
+            </form>
+        <%})%>
+            
+         
+        <form action="/" method="post">
+            <input type="text" placeholder="write next item" name="additem" autocom plete="off-+">
+            <button type="submit" name="list" value="<%= listTitle%>"> + </button>
+        </form>
+    </div>
+    
+    <%-include("footer")-%>
+
+    
+    
+    
+     
+    

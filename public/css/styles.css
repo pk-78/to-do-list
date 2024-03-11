@@ -1,0 +1,129 @@
+html {
+  background-color: rgb(179, 106, 231);
+  /* background: -webkit-linear-gradient(linear, left top, left bottom, (#2780e7), (#1a7fd8)); */
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,91,230,0.9585084033613446) 0%, rgba(55,211,221,1) 100%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(171, 60, 230, 0.959) 0%, rgb(216, 110, 225) 100%);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(232, 87, 87, 0.959) 0%, rgb(221, 121, 121) 100%);
+
+  text-align: center;
+  color: black;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #3a0610;
+}
+
+input[type="checkbox"] {
+ 
+}
+
+input[type="checkbox"] {
+  /* ...existing styles */
+  
+  margin: 20px;
+  place-content: center;
+}
+
+/* input[type="checkbox"]::before {
+  content: "";
+  width: 5.65em;
+  height: 5.65em;
+  transform: scale(0.12);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgb(128, 0, 0);
+}
+
+input[type="checkbox"]:checked::after {
+  transform: scale(1);
+  width: 3.65em;
+  height: 3.65em;
+  transform: scale(1.12);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgb(215, 116, 116);
+} */
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #000000;
+  font-weight: bold;
+}
+
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #115812;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(171, 60, 230, 0.959) 0%, rgb(216, 110, 225) 100%);
+
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-weight: bold;
+}
