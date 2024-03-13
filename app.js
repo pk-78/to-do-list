@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // mongoose.connect("mongodb://127.0.0.1:27017/todolist");
-mongoose.connect("mongodb+srv://priyanshukushwaha311:mbiq2N5PJ3GzTNdg@cluster0.1knml0a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect("mongodb+srv://priyanshukushwaha311:mbiq2N5PJ3GzTNdg@cluster0.1knml0a.mongodb.net/todolist  ");
 
 const itemSchema = {
     name: String
@@ -211,6 +211,6 @@ app.get("/about",function(req,res){
     res.render("about")
 
 })
-app.listen(3000, function(){
-    console.log("Server is running at 3000")
+app.listen(process.env.PORT || 3000,function(){
+    console.log("Server has started succesfuly ")
 });
