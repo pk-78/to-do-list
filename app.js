@@ -15,7 +15,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://127.0.0.1:27017/todolist");
+// mongoose.connect("mongodb://127.0.0.1:27017/todolist");
+mongoose.connect("mongodb+srv://priyanshukushwaha311:mbiq2N5PJ3GzTNdg@cluster0.1knml0a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 const itemSchema = {
     name: String
